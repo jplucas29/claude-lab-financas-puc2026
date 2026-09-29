@@ -6,7 +6,7 @@ Um dia de mão na massa: times multidisciplinares (Economia, Engenharia, Adminis
 
 Este repositório é o ponto de partida de todos os times: aqui estão os **cases**, os **dados**, as **regras** e as instruções de **entrega**.
 
-> **Com apoio de:** João Lisboa (Claude Community Ambassador no Brasil · Taicor) · [PREENCHER: departamento/coordenação da PUC-Rio e demais parceiros]
+> **Com apoio de: · [PREENCHER: departamento/coordenação da PUC-Rio e demais parceiros]
 
 ---
 
