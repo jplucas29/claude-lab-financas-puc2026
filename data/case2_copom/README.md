@@ -26,7 +26,7 @@ O desafio é construir um **tradutor do Copom**: algo que compare as atas, ident
 ## Caminhos
 
 - **Básico (chat):** suba duas ou mais atas e peça uma comparação lado a lado: o que entrou, o que saiu, o que mudou de tom. Depois transforme isso numa nota para um investidor leigo.
-- **Avançado (código):** extraia o texto das atas com Python, crie um **índice de tom** reprodutível (com o Claude classificando cada parágrafo, por exemplo), e compare com a trajetória da Selic e das expectativas do Focus.
+- **Avançado (código):** extrair e comparar as atas automaticamente, criar um **índice de tom** reprodutível e cruzar com a Selic e as expectativas do Focus. Código de partida e trilha em **[avancado/case2_copom](../../avancado/case2_copom/README.md)**.
 
 ## Perguntas para atacar
 

@@ -51,7 +51,7 @@ O desafio é construir um **termômetro das expectativas**: um relatório, paine
 ## Caminhos
 
 - **Básico (chat):** suba os dois CSVs e este README no Claude e peça uma análise e um relatório semanal no estilo "o que mudou no Focus".
-- **Avançado (código):** use o Claude Code para montar um script que baixa os dados atualizados, recalcula tudo e gera o relatório sozinho: um **workflow recorrente** que poderia rodar toda segunda.
+- **Avançado (código):** montar um **workflow recorrente** que baixa os dados, recalcula, se verifica e escreve o relatório sozinho, como poderia rodar toda segunda. Código de partida e trilha em **[avancado/case1_focus](../../avancado/case1_focus/README.md)**.
 
 ## Perguntas para atacar
 

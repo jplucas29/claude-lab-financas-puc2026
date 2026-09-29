@@ -6,7 +6,7 @@ Um dia de mão na massa: times multidisciplinares (Economia, Engenharia, Adminis
 
 Este repositório é o ponto de partida de todos os times: aqui estão os **cases**, os **dados**, as **regras** e as instruções de **entrega**.
 
-> **Com apoio de: · [PREENCHER: departamento/coordenação da PUC-Rio e demais parceiros]
+> **Com apoio de:** [PREENCHER: departamento/coordenação da PUC-Rio e demais parceiros]
 
 ---
 
@@ -22,14 +22,14 @@ Nunca usou GitHub ou o Claude? Comece por **[COMO_COMECAR.md](COMO_COMECAR.md)**
 
 ## Os 4 cases
 
-| # | Case | Pergunta central | Dados | Nível |
+| # | Case | Pergunta central | Dados | Caminhos |
 |---|------|------------------|-------|-------|
-| 1 | **[Termômetro do Focus](data/case1_focus/README.md)** | O mercado está acertando? Como as expectativas de IPCA, Selic, câmbio e PIB mudaram e como se comparam ao realizado? | Focus (BCB) + séries do SGS | Iniciante → avançado |
-| 2 | **[Tradutor do Copom](data/case2_copom/README.md)** | O que mudou no tom do Banco Central de uma reunião para outra, e o que isso diz sobre os próximos passos da Selic? | Atas do Copom (PDF) + Selic e Focus | Iniciante → avançado |
-| 3 | **[Nota de reação a resultado](data/case3_resultados/README.md)** | Em 1 página, como um analista de banco reagiria ao resultado trimestral de uma empresa da B3? | Releases de resultado (PDF) de 4 empresas | Iniciante → avançado |
-| 4 | **[Consultor de orçamento](data/case4_orcamento/README.md)** | Para onde vai o dinheiro de uma pessoa e em quanto tempo ela atinge uma meta de investimento? | Extrato bancário **fictício** (CSV) | Iniciante |
+| 1 | **[Termômetro do Focus](data/case1_focus/README.md)** | O mercado está acertando? Como as expectativas de IPCA, Selic, câmbio e PIB mudaram e como se comparam ao realizado? | Focus (BCB) + séries do SGS | Básico **ou** avançado |
+| 2 | **[Tradutor do Copom](data/case2_copom/README.md)** | O que mudou no tom do Banco Central de uma reunião para outra, e o que isso diz sobre os próximos passos da Selic? | Atas do Copom (PDF) + Selic e Focus | Básico **ou** avançado |
+| 3 | **[Nota de reação a resultado](data/case3_resultados/README.md)** | Em 1 página, como um analista de banco reagiria ao resultado trimestral de uma empresa da B3? | Releases de resultado (PDF) de 4 empresas | Básico **ou** avançado |
+| 4 | **[Consultor de orçamento](data/case4_orcamento/README.md)** | Para onde vai o dinheiro de uma pessoa e em quanto tempo ela atinge uma meta de investimento? | Extrato bancário **fictício** (CSV) | Básico |
 
-Todos os cases têm um **caminho básico**, que só usa o chat do Claude, e um **caminho avançado**, com código (Python/R, Claude Code). Os dois concorrem de igual para igual: a banca avalia o resultado, não a quantidade de código.
+Todos os cases podem ser resolvidos pelo **caminho básico**, só com o chat do Claude. Os cases 1, 2 e 3 têm também um **[caminho avançado](avancado/README.md)**, com código de partida em Python, Claude Code, Skills e fluxos automáticos que verificam os próprios números. Os dois caminhos concorrem de igual para igual: a banca avalia o resultado e o rigor, não a quantidade de código.
 
 ## Onde estão os dados
 
@@ -81,6 +81,12 @@ claude-lab-financas-puc2026/
 │   ├── case2_copom/             atas do Copom (PDF)
 │   ├── case3_resultados/        releases trimestrais (PDF)
 │   └── case4_orcamento/         extrato bancário fictício (CSV)
+├── avancado/                    caminho avançado dos cases 1, 2 e 3
+│   ├── case1_focus/             análise, acurácia e alertas do Focus
+│   ├── case2_copom/             extração, diff e índice de tom das atas
+│   ├── case3_resultados/        extrair → verificar → escrever a nota
+│   └── skills_exemplo/          Skill de exemplo (bcb-sgs)
+├── requirements.txt             bibliotecas do caminho avançado
 ├── scripts/
 │   └── baixar_dados_bcb.py      baixa/atualiza os dados do Banco Central
 ├── modelo-repositorio-time/

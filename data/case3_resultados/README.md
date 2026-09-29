@@ -31,7 +31,7 @@ Na pasta `releases/`, os releases de resultado mais recentes (PDF) de 4 empresas
 ## Caminhos
 
 - **Básico (chat):** suba um release e peça uma nota de reação de 1 página com os números-chave, destaques positivos e negativos e uma conclusão. Depois confira os números no PDF.
-- **Avançado (código/agente):** um fluxo em etapas, com o Claude **extraindo** os números para uma tabela, **verificando** cada um contra o texto, e só depois **escrevendo** a nota. Bônus: comparar as 4 empresas numa tabela de indicadores.
+- **Avançado (código/agente):** um fluxo em etapas, com o Claude **extraindo** os números, um verificador **conferindo** cada um contra o PDF, e só depois a nota sendo **escrita**. Código de partida e trilha em **[avancado/case3_resultados](../../avancado/case3_resultados/README.md)**.
 
 ## Perguntas para atacar
 

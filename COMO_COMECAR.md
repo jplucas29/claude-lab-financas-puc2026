@@ -7,7 +7,7 @@ Guia rápido para o dia do workshop. Dá para fazer tudo em 15 minutos, e o idea
 - **Notebook carregado** (e carregador; vai ter extensão, mas não para todo mundo ao mesmo tempo).
 - **Conta no Claude** (claude.ai), já logada no navegador.
 - **Conta no GitHub** (grátis, em github.com), já logada.
-- *Opcional, para o caminho avançado:* Python 3 com `pandas`, ou R, e o Claude Code instalado.
+- *Para o caminho avançado:* Python 3.10+ e o Claude Code instalado. Instruções em [avancado/README.md](avancado/README.md).
 
 ## 2. Pegar os dados
 
@@ -24,7 +24,7 @@ cd claude-lab-financas-puc2026
 
 **Caminho básico (só o chat):** abra o claude.ai, suba os arquivos do seu case (CSV ou PDF) e o `README.md` do case, e descreva o que vocês querem. O Claude lê PDFs, analisa planilhas, faz gráficos e pode criar um **artefato** (um app ou página interativa) direto na conversa.
 
-**Caminho avançado (código):** use o Claude Code na pasta do repositório para escrever scripts em Python/R, puxar dados atualizados das APIs do Banco Central (veja `scripts/baixar_dados_bcb.py`) e automatizar o fluxo.
+**Caminho avançado (código, cases 1 a 3):** use o Claude Code na pasta do repositório, a partir do código de partida e da trilha de cada case em **[avancado/](avancado/README.md)**.
 
 **Dicas que fazem diferença:**
 

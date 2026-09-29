@@ -18,3 +18,6 @@ desktop.ini
 
 # Segredos
 .env
+
+# Saídas geradas pelos scripts do caminho avançado
+avancado/**/saida/

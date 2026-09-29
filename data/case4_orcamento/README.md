@@ -34,8 +34,8 @@ Documentem cada decisão de tratamento no README do time. A banca vai perguntar.
 
 ## Caminhos
 
-- **Básico (chat):** suba os dois CSVs e peça ao Claude para categorizar, montar um resumo mensal e responder à Marina. Depois questione: os totais fazem sentido para um salário de R$ 6.500?
-- **Avançado (código/app):** um app (artefato) em que a Marina sobe o extrato, vê o painel de gastos, ajusta categorias e simula cenários ("e se eu cortar delivery pela metade?").
+- **Principal (chat):** suba os dois CSVs e peça ao Claude para categorizar, montar um resumo mensal e responder à Marina. Depois questione: os totais fazem sentido para um salário de R$ 6.500?
+- **Para ir além (ainda no chat):** peçam ao Claude um app (artefato) em que a Marina vê o painel de gastos, ajusta categorias e simula cenários ("e se eu cortar delivery pela metade?").
 
 ## Perguntas para atacar
 
