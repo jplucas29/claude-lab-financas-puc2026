@@ -1,6 +1,6 @@
 # Case 2 — Tradutor do Copom
 
-Claude Lab · Economia & Finanças · PUC-Rio · 30/10/2026
+Claude Lab · Economia & Finanças · PUC-Rio · 06/11/2026
 
 ## O problema
 

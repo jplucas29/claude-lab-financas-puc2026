@@ -42,7 +42,7 @@ Arquivos de apoio:
 - Rodem o fluxo para as 4 empresas e montem uma tabela comparativa.
 - Adaptem o template por setor: banco não tem "margem EBITDA".
 
-**Tarde (depois da aula 2) — nível 3: o agente de temporada de balanços**
+**Tarde (depois da palestra das 13h30) — nível 3: o agente de temporada de balanços**
 - Um comando só: recebe o PDF, extrai, gera o JSON, verifica, **refaz automaticamente o que falhou** (até N tentativas) e escreve a nota.
 - Transformem o formato da nota numa **Skill** (`SKILL.md`, veja o [exemplo](../skills_exemplo/bcb-sgs/SKILL.md)), para que o Claude sempre escreva no padrão da "casa".
 - Bônus: um segundo Claude lê a nota como se fosse o gestor e aponta o que ficou vago (padrão *evaluator-optimizer*).

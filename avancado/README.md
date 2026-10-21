@@ -28,9 +28,9 @@ Para os times que querem ir além do chat: código em Python, **Claude Code**, f
 
 | Momento | Nível | Foco |
 |---|---|---|
-| Manhã (10h05–12h05) | 1 e 2 | Rodar o código de partida, **entender e conferir** cada número, resolver os `TODO` |
-| Aula 2 (13h05–14h05) | — | Agentes, workflows, Skills e verificação |
-| Tarde (14h05–15h30) | 3 | Transformar a análise num **fluxo que roda sozinho e se verifica**, e publicar o resultado como artefato |
+| Manhã (10h30–13h00) | 1 e 2 | Rodar o código de partida, **entender e conferir** cada número, resolver os `TODO` |
+| Palestra (13h30–14h00) | — | Insights dentro do Claude |
+| Tarde (14h00–16h00) | 3 | Transformar a análise num **fluxo que roda sozinho e se verifica**, e publicar o resultado como artefato |
 
 ## Regras de ouro
 

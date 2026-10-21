@@ -1,6 +1,6 @@
 # Claude Lab · Economia & Finanças — PUC-Rio 2026
 
-**PUC-Rio · sexta, 30 de outubro de 2026 · Sala F300**
+**PUC-Rio · sexta, 6 de novembro de 2026 · 08h00 às 18h00 · Sala F300**
 
 Um dia de mão na massa: times multidisciplinares (Economia, Engenharia, Administração e quem mais se interessar por finanças) resolvem, com o **Claude**, problemas reais de análise econômica e financeira, usando **dados públicos brasileiros** (Banco Central, IBGE, CVM e relatórios de empresas), com **mentoria** de quem constrói agentes de IA no mercado e apresentação dos resultados no fim do dia.
 
@@ -35,25 +35,23 @@ Todos os cases podem ser resolvidos pelo **caminho básico**, só com o chat do 
 
 Tudo em **[`data/`](data/)**, uma pasta por case. Cada uma tem um `README.md` com o problema, o dicionário dos dados, os **cuidados de interpretação** e perguntas de partida. Os dados do Banco Central foram baixados com o script em [`scripts/`](scripts/), que você pode rodar de novo para atualizar. Leia **[USO-DOS-DADOS.md](USO-DOS-DADOS.md)** antes de publicar qualquer resultado.
 
-## Cronograma — sexta, 30/10 (Sala F300)
+## Cronograma — sexta, 06/11 (Sala F300)
 
 | Horário | Atividade |
 |---|---|
-| 08h00 – 08h45 | Credenciamento, coffee e **checagem dos notebooks** (login no Claude e GitHub) |
-| 08h45 – 09h45 | **Aula 1** — Claude, Claude Code/Cowork e o que é um agente de IA |
-| 09h45 – 10h05 | Apresentação dos cases e escolha pelos times |
-| 10h05 – 12h05 | **Mão na massa, parte 1** — primeira versão da solução (com mentoria) |
-| 12h05 – 13h05 | Almoço |
-| 13h05 – 14h05 | **Aula 2** — agentes, skills e conectores aplicados a finanças + dúvidas |
-| 14h05 – 15h30 | **Mão na massa, parte 2** — evoluir a solução com o que viram na aula 2 |
-| **15h30** | **Deadline da entrega** (vídeo + artefato + GitHub) |
-| 15h30 – 15h45 | Coffee · banca seleciona os finalistas |
-| 15h45 – 16h30 | Apresentação dos finalistas (5 min + 2 min de perguntas) |
-| 16h30 – 16h50 | Premiação e encerramento |
+| 08h00 – 09h00 | Coffee break · aproveitem para conferir o login no Claude e no GitHub |
+| 09h00 – 10h30 | **Palestra de abertura** — introdução ao Claude, apresentação dos participantes e dos cases do dia · João Lisboa (Taicor · Claude Ambassador), Diogo Miranda (MGV Tech), Igor Brito (Visagio) e Igor Peres (PUC-Rio) |
+| 10h30 – 13h00 | **Mão na massa, parte 1** — os times desenvolvem os cases com o Claude (mentoria Taicor · MGV Tech · Visagio) |
+| 13h00 – 13h30 | Almoço |
+| 13h30 – 14h00 | **Palestra** — apresentação de insights dentro do Claude · Igor Brito (Visagio) ou Diogo Miranda (MGV Tech), a confirmar |
+| 14h00 – 16h30 | **Mão na massa, parte 2** — finalização e entrega dos cases (mentoria Taicor · MGV Tech · Visagio) |
+| **16h00** | **Deadline da entrega** (vídeo + artefato + GitHub) |
+| 16h30 – 17h00 | Coffee break · banca (João Lisboa, Diogo Miranda, Igor Brito e Igor Peres) seleciona os **3 finalistas** |
+| 17h00 – 17h30 | Apresentação dos finalistas, anúncio do campeão e encerramento |
 
 ## Entrega e avaliação
 
-Três itens, todos **públicos**, até **15h30**:
+Três itens, todos **públicos**, até **16h00**:
 
 1. **Vídeo de até 2 minutos** mostrando o problema e a solução funcionando.
 2. **Artefato público**: o link publicado do que vocês construíram (app, dashboard, relatório interativo).

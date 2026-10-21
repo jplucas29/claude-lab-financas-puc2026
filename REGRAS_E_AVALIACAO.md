@@ -10,7 +10,7 @@
 
 ## Horário-limite (deadline)
 
-**Entregue tudo até 15h30.** O que estiver publicado até esse horário é o que a banca avalia. Depois, foco em preparar a apresentação, caso o time seja finalista.
+**Entregue tudo até 16h00.** O que estiver publicado até esse horário é o que a banca avalia. Depois, foco em preparar a apresentação, caso o time seja finalista.
 
 > Organização: confirmem o horário-limite na abertura; se mudar, atualizem aqui.
 
@@ -36,7 +36,7 @@ A banca dá nota de 1 a 5 em cada critério; a soma é ponderada pelos pesos:
 | **15** | **Ideia** | Quão original e bem pensado é o recorte escolhido? |
 | **15** | **Comunicação** | Vídeo e README contam a história com clareza? |
 
-**Seleção dos finalistas:** às 15h30 a banca avalia as entregas de todos os times e escolhe **5 a 6 finalistas**, que apresentam ao vivo (5 min + 2 min de perguntas). A classificação final considera a entrega e a apresentação.
+**Seleção dos finalistas:** das 16h30 às 17h00 a banca avalia as entregas de todos os times e escolhe os **3 finalistas**, que apresentam ao vivo a partir das 17h00 (5 min + 2 min de perguntas). O campeão é anunciado em seguida. A classificação final considera a entrega e a apresentação.
 
 ## Conduta
 

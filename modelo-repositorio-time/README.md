@@ -1,6 +1,6 @@
 # [Nome do projeto] — Case [nº e título]
 
-> Claude Lab · Economia & Finanças · PUC-Rio · 30/10/2026
+> Claude Lab · Economia & Finanças · PUC-Rio · 06/11/2026
 > Copie este arquivo para o README do GitHub do seu time e preencha. É a porta de entrada da entrega: a banca lê isto primeiro.
 
 **🎬 Vídeo (2 min):** [link]

@@ -22,7 +22,7 @@ O script [`extrair_atas.py`](extrair_atas.py) extrai o texto das atas, quebra em
   - **Sem chave:** peçam ao Claude Code para classificar `saida/paragrafos_atas.csv` usando a mesma régua do `PROMPT` do script.
 - **Validem o índice:** peguem 10 parágrafos, classifiquem vocês mesmos e comparem com o Claude. Onde discordam, e por quê?
 
-**Tarde (depois da aula 2) — nível 3: o agente do dia da ata**
+**Tarde (depois da palestra das 13h30) — nível 3: o agente do dia da ata**
 
 Montem o fluxo que um economista-chefe gostaria de receber no dia em que sai uma ata nova:
 

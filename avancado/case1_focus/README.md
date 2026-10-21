@@ -22,7 +22,7 @@ O script [`inicio_focus.py`](inicio_focus.py) já carrega e limpa os dados, mede
 - Calibrem os limiares de alerta com o histórico, em vez dos valores chutados no código.
 - Incluam a dispersão (`DesvioPadrao`): ela sobe antes das grandes revisões?
 
-**Tarde (depois da aula 2) — nível 3: o workflow que roda sozinho**
+**Tarde (depois da palestra das 13h30) — nível 3: o workflow que roda sozinho**
 
 Transformem a análise num **relatório semanal automático**, exatamente o padrão "workflow determinístico" da aula:
 

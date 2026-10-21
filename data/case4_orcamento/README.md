@@ -1,6 +1,6 @@
 # Case 4 — Consultor de orçamento
 
-Claude Lab · Economia & Finanças · PUC-Rio · 30/10/2026
+Claude Lab · Economia & Finanças · PUC-Rio · 06/11/2026
 
 > **Todos os dados deste case são fictícios**, gerados pela organização. Não existe pessoa real por trás deles.
 

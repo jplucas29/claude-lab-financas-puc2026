@@ -9,7 +9,7 @@
 
 Ensaiem uma vez antes de gravar. Uma gravação boa e simples vale mais que uma edição caprichada.
 
-## Antes do deadline (15h30)
+## Antes do deadline (16h00)
 
 - [ ] **Vídeo** publicado (YouTube não listado ou Drive "qualquer pessoa com o link"), com até 2 min.
 - [ ] **Artefato** publicado. Abram o link numa **aba anônima** para conferir que está público.
