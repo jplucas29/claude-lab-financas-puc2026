@@ -4,6 +4,8 @@ Leia antes o [README do case](../../data/case2_copom/README.md) (problema e cuid
 
 ## Ponto de partida
 
+Antes, sigam o **passo 0** do [README do case](../../data/case2_copom/README.md): baixem as 6 atas e salvem em `data/case2_copom/atas/` com o nome `ata_<nº da reunião>_<AAAA-MM-DD>.pdf`. Para a Selic e o Focus, rodem `python scripts/baixar_dados_bcb.py`.
+
 ```bash
 python avancado/case2_copom/extrair_atas.py
 ```

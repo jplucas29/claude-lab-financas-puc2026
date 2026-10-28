@@ -16,15 +16,22 @@ Construir um **site** que interprete o tom do Banco Central nas atas do Copom e 
 
 O site é o **artefato** que o time entrega (ver [regras](../../REGRAS_E_AVALIACAO.md)). Dá para fazer tudo no chat do Claude (caminho básico) ou com código (caminho avançado).
 
-## Arquivos
-
-| Arquivo | O que é |
-|---|---|
-| `atas/` | As **6 atas mais recentes** do Copom, em PDF, nomeadas `ata_<nº da reunião>_<data da reunião>.pdf` |
-| `../case1_focus/sgs_realizado.csv` | Selic meta realizada (série `selic_meta`) |
-| `../case1_focus/focus_anuais.csv` | Expectativas de Selic do mercado (`Indicador = Selic`) |
+> **Neste case, os dados não vêm prontos.** Encontrar e organizar a fonte faz parte do trabalho de um analista, e faz parte do desafio. Tudo o que vocês precisam é público e está no site do Banco Central.
 
 ## Como chegar lá: passo a passo
+
+### 0. Buscar os dados
+
+**As atas.** Baixem em PDF as **6 atas mais recentes do Copom publicadas até 06/11/2026**, na página [Atas do Copom](https://www.bcb.gov.br/publicacoes/atascopom) do Banco Central. Todos os times usam o mesmo conjunto, para que a banca consiga comparar os índices. Para cada ata, anotem o **nº da reunião**, a **data da reunião** e a **data de publicação** (ver cuidado nº 1).
+
+**A Selic e as expectativas** (usadas no passo 5):
+
+- **Selic meta realizada:** [histórico das taxas de juros](https://www.bcb.gov.br/controleinflacao/historicotaxasjuros) no site do Banco Central (ou série 432 do SGS);
+- **Expectativas de Selic do mercado:** [Relatório Focus](https://www.bcb.gov.br/publicacoes/focus), publicado toda segunda-feira.
+
+No caminho avançado, o script `scripts/baixar_dados_bcb.py` baixa a Selic e o Focus de uma vez (gera `sgs_realizado.csv` e `focus_anuais.csv` em `data/case1_focus/`). Salvem as atas em `data/case2_copom/atas/` com o nome `ata_<nº da reunião>_<AAAA-MM-DD>.pdf` (data da reunião), que é o padrão que os scripts esperam.
+
+> Não gastem mais de 15 minutos aqui. Se travar (internet, site fora do ar), chamem um mentor.
 
 ### 1. Entender a ata
 
@@ -62,10 +69,10 @@ Comparem a ata mais recente com a anterior: parágrafos novos, removidos e alter
 
 ### 5. Interpretar o principal impacto
 
-Para a mudança mais relevante, respondam: **o que ela sinaliza para a próxima decisão da Selic?** Usem os dados do Case 1 para fundamentar:
+Para a mudança mais relevante, respondam: **o que ela sinaliza para a próxima decisão da Selic?** Usem os dados do passo 0 para fundamentar:
 
-- a trajetória da **Selic meta** (`sgs_realizado.csv`): o tom acompanhou o que o Copom fez depois?
-- as **expectativas de Selic do Focus** (`focus_anuais.csv`): o mercado já esperava essa mudança? As expectativas se moveram depois da ata?
+- a trajetória da **Selic meta**: o tom acompanhou o que o Copom fez depois?
+- as **expectativas de Selic do Focus**: o mercado já esperava essa mudança? As expectativas se moveram depois da ata?
 
 Escrevam o "principal impacto" em 2 ou 3 frases simples, citando os canais (Selic, juros futuros, câmbio, crédito e consumo, inflação esperada) e usando linguagem condicional ("sinaliza", "pode"). Interpretação não é previsão.
 
@@ -86,13 +93,13 @@ Publiquem e abram o link numa aba anônima. **Bônus:** um campo em que o usuár
 
 | Momento | Passos |
 |---|---|
-| Manhã (10h30–13h00) | 1 a 4: régua definida, índice das 6 atas conferido e mudanças identificadas |
+| Manhã (10h30–13h00) | 0 a 4: dados reunidos, régua definida, índice das 6 atas conferido e mudanças identificadas |
 | Tarde (14h00–16h00) | 5 e 6: impacto escrito, site publicado, vídeo gravado |
 
 ## Caminhos
 
-- **Básico (chat):** todos os passos dentro do claude.ai. Subam as atas em PDF e os dois CSVs do Case 1, façam os passos 1 a 5 na conversa e peçam o site no passo 6.
-- **Avançado (código):** scripts extraem as atas, geram o diff e classificam os parágrafos automaticamente, e o site é montado a partir desses resultados. Código de partida e trilha em **[avancado/case2_copom](../../avancado/case2_copom/README.md)**.
+- **Básico (chat):** baixem as atas pelo navegador, subam os PDFs no claude.ai junto com a Selic e as expectativas do Focus, façam os passos 1 a 5 na conversa e peçam o site no passo 6.
+- **Avançado (código):** o script do Banco Central baixa a Selic e o Focus, outros scripts extraem as atas, geram o diff e classificam os parágrafos automaticamente, e o site é montado a partir desses resultados. Código de partida e trilha em **[avancado/case2_copom](../../avancado/case2_copom/README.md)**.
 
 ## Cuidados com os dados
 
@@ -100,10 +107,12 @@ Publiquem e abram o link numa aba anônima. **Bônus:** um campo em que o usuár
 2. **Mudança de tom não é mudança de juros.** Uma ata pode manter a Selic e endurecer muito o discurso. Separe "o que decidiram" de "como falaram".
 3. **Não confie num índice de tom sem olhar o texto.** Toda nota precisa de um trecho que a justifique, com nº do parágrafo.
 4. **Estrutura parecida entre atas** ajuda a comparar seção por seção. Use isso.
-5. **Impacto é interpretação, não previsão.** Fundamentem nos dados e no texto, deixem claro o que é hipótese e coloquem o aviso de que não é recomendação de investimento.
+5. **Selic no Focus é a taxa esperada para o fim do ano**, não a da próxima reunião. Leiam com cuidado antes de dizer "o mercado esperava".
+6. **Impacto é interpretação, não previsão.** Fundamentem nos dados e no texto, deixem claro o que é hipótese e coloquem o aviso de que não é recomendação de investimento.
 
 ## O que a banca vai olhar neste case
 
+- Os dados usados estão **identificados** (quais atas, de onde, até que data)?
 - A régua do índice é clara e o resultado é **reprodutível**?
 - Cada mudança apontada **existe de fato na ata** (nº do parágrafo)?
 - O impacto está **fundamentado** em dados e explicado em linguagem simples?

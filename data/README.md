@@ -5,7 +5,7 @@ Uma pasta por case. **Leia o README do case antes de analisar**: cada um traz o 
 | Case | Pasta | Formato |
 |---|---|---|
 | 1 — Termômetro do Focus | [`case1_focus/`](case1_focus/README.md) | CSV |
-| 2 — Tradutor do Copom | [`case2_copom/`](case2_copom/README.md) | PDF (+ CSV do case 1) |
+| 2 — Tradutor do Copom | [`case2_copom/`](case2_copom/README.md) | PDF, **buscado pelo próprio time** (ver passo 0 do case) |
 | 3 — Nota de reação a resultado | [`case3_resultados/`](case3_resultados/README.md) | PDF |
 
 Fontes e regras de uso em [USO-DOS-DADOS.md](../USO-DOS-DADOS.md).
