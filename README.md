@@ -28,7 +28,7 @@ Nunca usou GitHub ou o Claude? Comece por **[COMO_COMECAR.md](COMO_COMECAR.md)**
 | 2 | **[Tradutor do Copom](data/case2_copom/README.md)** | Um site que lê as atas do Copom, mede o tom do Banco Central num índice e explica o que mudou e qual pode ser o principal impacto dessa mudança | Atas do Copom (PDF) + Selic e Focus 
 | 3 | **[Nota de reação a resultado](data/case3_resultados/README.md)** | Em 1 página, como um analista de banco reagiria ao resultado trimestral de uma empresa da B3? | Releases de resultado (PDF) de 4 empresas | 
 
-Os três cases podem ser resolvidos pelo **caminho básico**, só com o chat do Claude, ou pelo **[caminho avançado](avancado/README.md)**, com código de partida em Python, Claude Code, Skills e fluxos automáticos que verificam os próprios números. Os dois caminhos concorrem de igual para igual: a banca avalia o resultado e o rigor, não a quantidade de código.
+Os três cases buscam  resolver problemas de pessoas de dentro do mercado financeiro de forma que realmente seja uma ferramenta útil para o dia a dia. O objetivo é dispertar a curiosidade com IA para que vocês sejam capazes de automatizarem processos. Os cases tendem a ser resolvidos pelo **[caminho avançado](avancado/README.md)**, com código de partida em Python, Claude Code, Skills e fluxos automáticos que verificam os próprios números. 
 
 ## Onde estão os dados
 
