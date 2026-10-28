@@ -3,7 +3,7 @@
 ## O formato
 
 - **Times de 4 pessoas, multidisciplinares.** Junte perfis diferentes: quem entende de economia e finanças, quem programa, quem apresenta. A mistura é proposital, é assim que times de mercado funcionam hoje.
-- **Um case por time.** Escolha um dos quatro. Cruzar com outro case é bem-vindo, desde que o foco fique claro.
+- **Um case por time.** Escolha um dos três. Cruzar com outro case é bem-vindo, desde que o foco fique claro.
 - **Construção com o Claude**, com mentoria. Os mentores circulam por todas as mesas; não há mentor fixo por time.
 - **Caminho básico e avançado valem igual.** A banca avalia o resultado e o rigor, não quantas linhas de código vocês escreveram.
 - **Tempo é o recurso escasso.** Uma coisa que funciona e conta uma história vale mais que cinco coisas pela metade.

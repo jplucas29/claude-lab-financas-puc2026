@@ -1,6 +1,6 @@
 # Caminho avançado
 
-Para os times que querem ir além do chat: código em Python, **Claude Code**, fluxos automáticos e agentes. Vale para os cases **1 (Focus)**, **2 (Copom)** e **3 (Nota de resultado)**. O Case 4 é pensado para o caminho básico.
+Para os times que querem ir além do chat: código em Python, **Claude Code**, fluxos automáticos e agentes. Vale para os cases **1 (Focus)**, **2 (Copom)** e **3 (Nota de resultado)**.
 
 > O caminho avançado **não ganha ponto só por ser avançado**. A banca avalia utilidade, rigor e produto (ver [regras](../REGRAS_E_AVALIACAO.md)). Um fluxo automatizado que **verifica os próprios números** é o que diferencia.
 

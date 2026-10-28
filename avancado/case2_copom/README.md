@@ -22,16 +22,17 @@ O script [`extrair_atas.py`](extrair_atas.py) extrai o texto das atas, quebra em
   - **Sem chave:** peçam ao Claude Code para classificar `saida/paragrafos_atas.csv` usando a mesma régua do `PROMPT` do script.
 - **Validem o índice:** peguem 10 parágrafos, classifiquem vocês mesmos e comparem com o Claude. Onde discordam, e por quê?
 
-**Tarde (depois da palestra das 13h30) — nível 3: o agente do dia da ata**
+**Tarde (depois da palestra das 13h30) — nível 3: o site do índice de tom**
 
-Montem o fluxo que um economista-chefe gostaria de receber no dia em que sai uma ata nova:
+O objetivo final do case é um **site** com o índice de tom, o que mudou e o principal impacto (ver o [README do case](../../data/case2_copom/README.md#o-objetivo)). No caminho avançado, o site é gerado a partir dos resultados dos scripts, não escrito à mão:
 
-1. extrair a ata nova;
-2. comparar com a anterior (diff);
-3. classificar o tom e comparar com o histórico das 6 reuniões;
-4. cruzar com a trajetória da Selic e das expectativas de Selic do Focus (dados do Case 1);
-5. **um segundo Claude revisa a nota** procurando afirmações sem base no texto da ata (padrão *evaluator-optimizer* da aula);
-6. publicar a nota como artefato.
+1. extrair as atas (`extrair_atas.py`);
+2. comparar a mais recente com a anterior (diff);
+3. classificar o tom de cada parágrafo e calcular o índice por reunião (`classificar_tom.py` ou Claude Code);
+4. cruzar o índice com a trajetória da Selic e das expectativas de Selic do Focus (dados do Case 1);
+5. pedir ao Claude o texto do "principal impacto" **a partir desses resultados**, e **um segundo Claude revisa** procurando afirmações sem base no texto da ata (padrão *evaluator-optimizer*);
+6. juntar tudo num JSON (índice, mudanças, impacto) e gerar o site a partir dele, para que uma ata nova atualize o site rodando o fluxo de novo;
+7. publicar o site como artefato.
 
 ## Onde o Claude Code ajuda
 

@@ -20,16 +20,15 @@ Este repositório é o ponto de partida de todos os times: aqui estão os **case
 
 Nunca usou GitHub ou o Claude? Comece por **[COMO_COMECAR.md](COMO_COMECAR.md)**.
 
-## Os 4 cases
+## Os 3 cases
 
 | # | Case | Pergunta central | Dados | Caminhos |
 |---|------|------------------|-------|-------|
 | 1 | **[Termômetro do Focus](data/case1_focus/README.md)** | O mercado está acertando? Como as expectativas de IPCA, Selic, câmbio e PIB mudaram e como se comparam ao realizado? | Focus (BCB) + séries do SGS | Básico **ou** avançado |
-| 2 | **[Tradutor do Copom](data/case2_copom/README.md)** | O que mudou no tom do Banco Central de uma reunião para outra, e o que isso diz sobre os próximos passos da Selic? | Atas do Copom (PDF) + Selic e Focus | Básico **ou** avançado |
+| 2 | **[Tradutor do Copom](data/case2_copom/README.md)** | Um site que lê as atas do Copom, mede o tom do Banco Central num índice e explica o que mudou e qual pode ser o principal impacto dessa mudança | Atas do Copom (PDF) + Selic e Focus | Básico **ou** avançado |
 | 3 | **[Nota de reação a resultado](data/case3_resultados/README.md)** | Em 1 página, como um analista de banco reagiria ao resultado trimestral de uma empresa da B3? | Releases de resultado (PDF) de 4 empresas | Básico **ou** avançado |
-| 4 | **[Consultor de orçamento](data/case4_orcamento/README.md)** | Para onde vai o dinheiro de uma pessoa e em quanto tempo ela atinge uma meta de investimento? | Extrato bancário **fictício** (CSV) | Básico |
 
-Todos os cases podem ser resolvidos pelo **caminho básico**, só com o chat do Claude. Os cases 1, 2 e 3 têm também um **[caminho avançado](avancado/README.md)**, com código de partida em Python, Claude Code, Skills e fluxos automáticos que verificam os próprios números. Os dois caminhos concorrem de igual para igual: a banca avalia o resultado e o rigor, não a quantidade de código.
+Os três cases podem ser resolvidos pelo **caminho básico**, só com o chat do Claude, ou pelo **[caminho avançado](avancado/README.md)**, com código de partida em Python, Claude Code, Skills e fluxos automáticos que verificam os próprios números. Os dois caminhos concorrem de igual para igual: a banca avalia o resultado e o rigor, não a quantidade de código.
 
 ## Onde estão os dados
 
@@ -77,8 +76,7 @@ claude-lab-financas-puc2026/
 ├── data/
 │   ├── case1_focus/             expectativas Focus + séries SGS (CSV)
 │   ├── case2_copom/             atas do Copom (PDF)
-│   ├── case3_resultados/        releases trimestrais (PDF)
-│   └── case4_orcamento/         extrato bancário fictício (CSV)
+│   └── case3_resultados/        releases trimestrais (PDF)
 ├── avancado/                    caminho avançado dos cases 1, 2 e 3
 │   ├── case1_focus/             análise, acurácia e alertas do Focus
 │   ├── case2_copom/             extração, diff e índice de tom das atas
