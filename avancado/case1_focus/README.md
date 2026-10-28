@@ -4,34 +4,41 @@ Leia antes o [README do case](../../data/case1_focus/README.md) (problema e cuid
 
 ## Ponto de partida
 
+O objetivo do case é o **agente semanal** descrito no [README do case](../../data/case1_focus/README.md#o-objetivo). Ele já existe em versão inicial e roda de ponta a ponta:
+
 ```bash
-python scripts/baixar_dados_bcb.py            # opcional: atualiza os dados
-python avancado/case1_focus/inicio_focus.py   # roda a análise inicial
+python avancado/case1_focus/agente_semanal.py --sem-email     # roda tudo, menos o envio
+python avancado/case1_focus/enviar_email.py                   # testa o e-mail (depois de criar o .env)
+python avancado/case1_focus/agente_semanal.py                 # fluxo completo
 ```
 
-O script [`inicio_focus.py`](inicio_focus.py) já carrega e limpa os dados, mede se o mercado acertou IPCA e Selic, gera alertas e salva um gráfico em `saida/`. **Leiam o código antes de usar**: vocês vão ter que defender cada número.
+| Arquivo | O que faz |
+|---|---|
+| [`agente_semanal.py`](agente_semanal.py) | o agente: baixar → calcular → checar → analisar (`claude -p`) → conferir → montar → enviar |
+| [`inicio_focus.py`](inicio_focus.py) | funções de carga, séries semanais, acurácia e alertas (usadas pelo agente) |
+| [`prompt_analise.md`](prompt_analise.md) | o prompt fixo que o Claude recebe junto com o JSON da semana |
+| [`enviar_email.py`](enviar_email.py) | envio pelo Gmail, lendo a senha de app do `.env` |
+| [`.env.exemplo`](.env.exemplo) | modelo do `.env` (copiem para `.env` e preencham; o `.env` não vai para o GitHub) |
+
+O Claude é chamado pelo Claude Code em modo não interativo (`claude -p`), que usa o login do plano pago. **Leiam o código antes de usar**: vocês vão ter que defender cada número.
 
 ## Trilha sugerida
 
-**Manhã — nível 1: análise confiável**
-- Rodem o script e **confiram 3 números à mão** (ex.: o IPCA de 2025 composto a partir de `ipca_mensal` contra a série `ipca_12m` de dezembro).
-- Resolvam os `TODO` de acurácia: Câmbio e PIB.
-- Respondam: o mercado erra mais para cima ou para baixo? Erra mais em que tipo de ano?
+**Manhã — nível 1: entender e conferir**
+- Rodem o agente com `--sem-email` e abram `saida/relatorio_semana.html`.
+- **Confiram 3 números à mão** contra o Relatório Focus oficial.
+- Testem a parada: alterem um dado de propósito e vejam o agente parar.
 
-**Manhã — nível 2: alertas que fazem sentido**
-- Calibrem os limiares de alerta com o histórico, em vez dos valores chutados no código.
-- Incluam a dispersão (`DesvioPadrao`): ela sobe antes das grandes revisões?
+**Manhã — nível 2: um termômetro que vale a pena receber**
+- Calibrem os limiares de alerta com o histórico, em vez dos valores chutados.
+- Incluam o que um gestor quer ver toda segunda (dispersão, Selic atual × esperada, acurácia).
+- Acrescentem uma checagem nova na etapa `checar`.
 
-**Tarde (depois da palestra das 13h30) — nível 3: o agente que envia o e-mail**
-
-Transformem a análise no **agente semanal** descrito no [README do case](../../data/case1_focus/README.md#o-objetivo):
-
-1. baixar dados novos (`scripts/baixar_dados_bcb.py`);
-2. recalcular tudo e salvar um `resumo_semana.json`;
-3. **checar** (a data mais recente é desta semana? algum valor absurdo?) e parar se algo falhar;
-4. pedir ao Claude a análise **a partir do JSON**, nunca inventando números;
-5. montar e enviar o e-mail (credenciais em `.env` ou nos Secrets do GitHub, nunca no código);
-6. agendar com GitHub Actions (`schedule` + `workflow_dispatch`) para rodar toda segunda.
+**Tarde (depois da palestra das 13h30) — nível 3: o agente pronto para rodar sozinho**
+1. melhorar o `prompt_analise.md` e fazer o agente **pedir reescrita** quando a conferência acusar número sem base no JSON;
+2. ligar o e-mail (`.env`) e deixar o e-mail com a cara do time;
+3. agendar no Agendador de Tarefas do Windows ou no `cron` (ver o README do case);
+4. publicar o `relatorio_semana.html` como artefato.
 
 Bônus: transformem o procedimento numa **Skill** (veja o [exemplo](../skills_exemplo/bcb-sgs/SKILL.md)) para que qualquer pessoa rode o termômetro com um pedido só.
 

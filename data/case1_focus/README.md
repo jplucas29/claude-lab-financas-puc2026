@@ -18,6 +18,8 @@ Construir um **agente** que, toda semana e sem ninguém apertar um botão:
 
 > A diferença para o Case 2: lá o produto é um site de análise. Aqui o produto é um **fluxo automático e recorrente**, que trabalha sozinho toda segunda-feira.
 
+Tudo roda no computador do time e cabe no **plano pago do Claude**: o agente chama o Claude pelo Claude Code em modo não interativo (`claude -p`), que usa o login do plano. Não precisa de chave de API.
+
 ## Os dados
 
 Os dados **não vêm prontos**: o próprio agente busca toda semana nas APIs abertas do Banco Central, sem cadastro nem chave. O script [`scripts/baixar_dados_bcb.py`](../../scripts/baixar_dados_bcb.py) é o ponto de partida dessa etapa e gera dois arquivos em `data/case1_focus/`:
@@ -51,67 +53,73 @@ Os dados **não vêm prontos**: o próprio agente busca toda semana nas APIs abe
 
 ## Como chegar lá: passo a passo
 
-### 1. Baixar e entender os dados
+O time **não começa do zero**: [`avancado/case1_focus/agente_semanal.py`](../../avancado/case1_focus/agente_semanal.py) é um esqueleto que já roda de ponta a ponta (baixar → calcular → checar → analisar → conferir → montar → enviar). O trabalho do dia é entender cada etapa, conferir e deixar cada uma melhor. Os pontos a melhorar estão marcados com `TODO` no código.
 
-Rodem `python scripts/baixar_dados_bcb.py` e peçam ao Claude Code para explicar os dois CSVs com base nesta página. Confiram: qual é a data mais recente? Quantas linhas há por semana? O que muda entre `baseCalculo` 0 e 1? Abram o [Relatório Focus](https://www.bcb.gov.br/publicacoes/focus) da última segunda no site do BC e achem nele 2 números que também estão no CSV.
+### 0. Preparar o computador (antes do dia)
 
-### 2. Calcular o termômetro da semana
+- Python 3.10+ e `pip install -r requirements.txt` na raiz do repositório;
+- **Claude Code** instalado e logado com o plano pago: digitar `claude` no terminal tem que abrir o Claude;
+- uma conta **Gmail** com verificação em duas etapas, para gerar a "senha de app" do passo 5.
 
-Partam de [`avancado/case1_focus/inicio_focus.py`](../../avancado/case1_focus/inicio_focus.py), que já carrega, limpa e monta as séries semanais. Para IPCA, Selic, Câmbio e PIB, no ano corrente e no próximo, calculem:
+### 1. Rodar o agente pela primeira vez
 
-- a **mediana atual** e a **variação** na semana e em 4 semanas;
-- a **distância da meta** de inflação (3%) para o IPCA;
-- a **dispersão** (`DesvioPadrao`): o mercado está mais ou menos dividido?
-- **alertas**: movimentos fora do normal, com limiares calibrados pelo histórico, e não chutados.
+```bash
+python avancado/case1_focus/agente_semanal.py --sem-email
+```
 
-Salvem tudo num arquivo estruturado, por exemplo `resumo_semana.json`. **Esse arquivo é a única fonte dos números do e-mail.**
+Ele baixa os dados, calcula, pede a análise ao Claude e salva `avancado/case1_focus/saida/relatorio_semana.html`. Abram esse arquivo no navegador. Depois:
 
-### 3. Conferir antes de escrever
+- peçam ao Claude Code: *"Leia agente_semanal.py e me explique cada etapa"*;
+- abram o [Relatório Focus](https://www.bcb.gov.br/publicacoes/focus) da última segunda no site do BC e **confiram 2 números** do relatório de vocês contra o oficial.
 
-Um agente que manda e-mail sozinho não pode mandar número errado. Antes de seguir, o código checa automaticamente, por exemplo:
+### 2. Melhorar o termômetro (etapa `calcular`)
 
-- a data mais recente é desta semana? (se o Focus não saiu, não há o que analisar)
-- o filtro `baseCalculo = 0` foi aplicado?
-- algum valor está fora de uma faixa plausível?
+Hoje ela calcula mediana, variação na semana e em 4 semanas, dispersão e distância da meta. O time decide **o que um gestor quer ver toda segunda** e completa:
 
-Se alguma checagem falhar, o agente **para** e manda um e-mail curto de alerta para o time, em vez do relatório.
+- **calibrar os alertas**: os limiares do código são chutes. Usem o histórico (por exemplo, 2 desvios-padrão das variações de 4 semanas);
+- incluir o que fizer sentido: a Selic atual contra a esperada, a acurácia do mercado no ano passado (funções prontas em `inicio_focus.py`), a dispersão subindo.
 
-### 4. Escrever a análise com o Claude
+Tudo vai para `saida/resumo_semana.json`, que é **a única fonte dos números do e-mail**.
 
-Montem um **prompt fixo** (guardem num arquivo, por exemplo `prompt_analise.md`) que recebe só o `resumo_semana.json` e devolve sempre o mesmo formato: um título, 3 a 5 pontos sobre o que mudou e um parágrafo "o que observar na próxima semana". Regras do prompt: usar apenas os números do JSON, citar a fonte e não fazer recomendação de investimento.
+### 3. Reforçar as checagens (etapa `checar`)
 
-**Bônus de rigor:** um teste automático que confere se todo número citado no texto existe no JSON.
+O agente já para se o Focus estiver desatualizado ou se um valor sair da faixa plausível, e nesse caso manda um e-mail de alerta em vez do relatório. Acrescentem pelo menos uma checagem de vocês (por exemplo, número de respondentes muito baixo ou semana repetida) e **testem**: alterem um dado de propósito e vejam o agente parar.
 
-> Para o agente chamar o Claude sozinho, há duas opções: o Claude Code em modo não interativo (`claude -p "..."`) ou a API da Anthropic, com uma chave (`ANTHROPIC_API_KEY`) cobrada à parte do plano do Claude. Vejam o [guia do caminho avançado](../../avancado/README.md).
+### 4. Melhorar a análise (etapas `analisar` e `conferir`)
 
-### 5. Montar e enviar o e-mail
+- O texto sai do prompt em [`prompt_analise.md`](../../avancado/case1_focus/prompt_analise.md). Ajustem o tom, o formato e o que a análise deve destacar.
+- A etapa `conferir` já detecta números no texto que não existem no JSON, mas só avisa. **Desafio:** quando isso acontecer, o agente pede ao Claude para reescrever (até 2 tentativas) e só envia se passar.
 
-O e-mail tem a análise, uma tabela com os números da semana, um gráfico simples (opcional), a fonte ("Banco Central do Brasil, Relatório Focus de dd/mm/aaaa") e o aviso de que não é recomendação de investimento. Para enviar:
+### 5. Ligar o e-mail
 
-- **Gmail:** biblioteca `smtplib` do Python com uma **senha de app** (exige verificação em duas etapas na conta);
-- **ou** um serviço de envio de e-mails com plano gratuito.
+1. Gerem uma **senha de app** do Gmail (myaccount.google.com/apppasswords);
+2. copiem `avancado/case1_focus/.env.exemplo` para `.env` na mesma pasta e preencham. **O `.env` nunca vai para o GitHub** (o `.gitignore` já o ignora);
+3. testem: `python avancado/case1_focus/enviar_email.py`;
+4. rodem o agente completo, agora sem `--sem-email`.
 
-**Senhas e chaves ficam em `.env` (no computador) ou nos Secrets do GitHub, nunca no código.** Testem enviando para vocês mesmos.
+Deixem o e-mail com a cara do time: ordem das seções, cores, um gráfico.
 
 ### 6. Agendar toda semana
 
-O Focus sai segunda de manhã. Agendem o agente para rodar depois disso:
+O Focus sai segunda de manhã. Agendem o agente para rodar depois disso, no próprio computador:
 
-- **Recomendado: GitHub Actions.** Um arquivo `.github/workflows/focus_semanal.yml` com `schedule` (ex.: `cron: "0 13 * * 1"`, segunda às 10h de Brasília) roda na nuvem, mesmo com o computador desligado. Incluam também `workflow_dispatch` para disparar na hora: é assim que vocês vão demonstrar o agente funcionando no dia.
-- **Alternativa:** o Agendador de Tarefas do Windows (ou `cron`), que só funciona com o computador ligado.
+- **Windows:** *Agendador de Tarefas → Criar Tarefa Básica →* Semanal, segunda, 10h *→ Iniciar um programa*: o caminho completo do `python.exe` em "Programa" e o caminho completo do `agente_semanal.py` em "Argumentos";
+- **Mac/Linux:** uma linha no `crontab -e`, por exemplo `0 10 * * 1 cd /caminho/do/repo && python3 avancado/case1_focus/agente_semanal.py`.
+
+Limitação a registrar no README do time: o computador precisa estar ligado e com o Claude Code logado na hora agendada. No dia, a demonstração é **rodar o agente na hora** e mostrar o e-mail chegando.
 
 ### 7. Publicar o artefato
 
-O artefato público é a **versão web do relatório da semana**: o mesmo conteúdo do e-mail numa página publicada. No vídeo, mostrem o disparo do agente e o e-mail chegando.
+O artefato público é a **versão web do relatório da semana**: o `relatorio_semana.html` publicado (por exemplo, como artefato no claude.ai). No vídeo, mostrem o agente rodando e o e-mail chegando.
 
 ### Ritmo sugerido no dia
 
 | Momento | Passos |
 |---|---|
-| Manhã (10h30–13h00) | 1 a 3: dados baixados, termômetro calculado e checagens funcionando |
+| Manhã (10h30–13h00) | 1 a 3: agente rodando, termômetro melhorado e checagens testadas |
 | Tarde (14h00–16h00) | 4 a 7: análise, e-mail, agendamento e artefato |
 
-Código de partida e trilha em **[avancado/case1_focus](../../avancado/case1_focus/README.md)**.
+Guia técnico em **[avancado/case1_focus](../../avancado/case1_focus/README.md)**.
 
 ## Cuidados com os dados (leia antes de concluir qualquer coisa)
 
@@ -121,15 +129,15 @@ Código de partida e trilha em **[avancado/case1_focus](../../avancado/case1_foc
 4. **Selic no Focus é a taxa no fim do ano**, não a média do ano.
 5. **Expectativa de PIB é para o ano inteiro**, e o PIB oficial só sai trimestralmente, com atraso. O IBC-Br é só uma aproximação mensal.
 6. **Toda análise diz a data dos dados.** O e-mail precisa dizer de qual Focus está falando.
-7. **Segurança:** senhas, chaves e tokens nunca vão para o GitHub. E o agente só envia e-mail para quem pediu para receber (vocês e a banca).
+7. **Segurança:** a senha de app do Gmail fica só no `.env` e nunca vai para o GitHub. E o agente só envia e-mail para quem pediu para receber (vocês e a banca).
 
 ## O que a banca vai olhar neste case
 
-- O agente **roda sozinho** do começo ao fim (demonstrado com o disparo manual do agendamento)?
+- O agente **roda sozinho** do começo ao fim, com um único comando, e está agendado para toda semana?
 - Os números do e-mail **batem com o Relatório Focus** oficial?
 - O agente **para** quando os dados estão errados ou desatualizados?
 - A análise é **útil** para quem recebe e não inventa números?
-- Senhas e chaves estão **protegidas**?
+- A senha do e-mail está **protegida** (fora do código e do GitHub)?
 
 ## Perguntas para atacar
 

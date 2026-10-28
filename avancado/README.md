@@ -13,7 +13,7 @@
    ```
 3. **Claude Code** instalado e logado ([documentação](https://docs.claude.com/en/docs/claude-code/overview)). Rode `claude` dentro da pasta do repositório.
    > Todos os participantes precisam de um **plano pago do Claude** (Pro ou superior), que é o que dá acesso ao Claude Code. Testem a instalação e o login antes do dia 06/11.
-4. *Opcional:* chave da API da Anthropic (`ANTHROPIC_API_KEY`), **cobrada à parte do plano do Claude**. Serve para scripts que chamam o Claude sozinhos: o `classificar_tom.py` do Case 2 e o agente semanal do Case 1. Sem chave, usem o Claude Code, inclusive em modo não interativo (`claude -p "..."`). **Nunca subam a chave para o GitHub** (o `.gitignore` já ignora `.env`).
+4. *Opcional:* chave da API da Anthropic (`ANTHROPIC_API_KEY`), **cobrada à parte do plano do Claude**. Só é usada pelo `classificar_tom.py` do Case 2. Sem chave, o próprio Claude Code faz a mesma tarefa. O agente do Case 1 **não** precisa de chave: ele chama o Claude pelo Claude Code (`claude -p`), que usa o plano. **Nunca subam a chave para o GitHub** (o `.gitignore` já ignora `.env`).
 
 ## Os guias
 
