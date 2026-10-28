@@ -22,15 +22,16 @@ O script [`inicio_focus.py`](inicio_focus.py) já carrega e limpa os dados, mede
 - Calibrem os limiares de alerta com o histórico, em vez dos valores chutados no código.
 - Incluam a dispersão (`DesvioPadrao`): ela sobe antes das grandes revisões?
 
-**Tarde (depois da palestra das 13h30) — nível 3: o workflow que roda sozinho**
+**Tarde (depois da palestra das 13h30) — nível 3: o agente que envia o e-mail**
 
-Transformem a análise num **relatório semanal automático**, exatamente o padrão "workflow determinístico" da aula:
+Transformem a análise no **agente semanal** descrito no [README do case](../../data/case1_focus/README.md#o-objetivo):
 
 1. baixar dados novos (`scripts/baixar_dados_bcb.py`);
-2. recalcular tudo (seu código);
-3. **checar** (ex.: a data mais recente é desta semana? algum valor absurdo?) e parar se algo falhar;
-4. pedir ao Claude para escrever o texto da semana **a partir dos números calculados**, nunca inventando números;
-5. publicar o relatório como artefato.
+2. recalcular tudo e salvar um `resumo_semana.json`;
+3. **checar** (a data mais recente é desta semana? algum valor absurdo?) e parar se algo falhar;
+4. pedir ao Claude a análise **a partir do JSON**, nunca inventando números;
+5. montar e enviar o e-mail (credenciais em `.env` ou nos Secrets do GitHub, nunca no código);
+6. agendar com GitHub Actions (`schedule` + `workflow_dispatch`) para rodar toda segunda.
 
 Bônus: transformem o procedimento numa **Skill** (veja o [exemplo](../skills_exemplo/bcb-sgs/SKILL.md)) para que qualquer pessoa rode o termômetro com um pedido só.
 

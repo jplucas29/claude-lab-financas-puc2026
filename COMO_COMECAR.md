@@ -5,7 +5,7 @@ Guia rápido para o dia do workshop. Dá para fazer tudo em 15 minutos, e o idea
 ## 1. O que você precisa (traga no dia)
 
 - **Notebook carregado** (e carregador; vai ter extensão, mas não para todo mundo ao mesmo tempo).
-- **Conta no Claude** (claude.ai), já logada no navegador.
+- **Plano pago do Claude** (Pro ou superior), já logado no navegador e no Claude Code. Todos os participantes precisam ter acesso.
 - **Conta no GitHub** (grátis, em github.com), já logada.
 - **Python 3.10+ e Claude Code instalados**, com as bibliotecas do `requirements.txt`. É obrigatório: todos os cases são feitos com código. Instruções em [avancado/README.md](avancado/README.md).
 
