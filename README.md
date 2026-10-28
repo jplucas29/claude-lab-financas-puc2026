@@ -2,7 +2,7 @@
 
 **PUC-Rio · sexta, 6 de novembro de 2026 · 08h00 às 18h00 · Sala F300**
 
-Um dia de mão na massa: times multidisciplinares (Economia, Engenharia, Administração e quem mais se interessar por finanças) resolvem, com o **Claude**, problemas reais de análise econômica e financeira, usando **dados públicos brasileiros** (Banco Central, IBGE, CVM e relatórios de empresas), com **mentoria** de quem constrói agentes de IA no mercado e apresentação dos resultados no fim do dia.
+Um dia de mão na massa: resolvam, com o **Claude**, problemas reais de análise econômica e financeira, usando **dados públicos brasileiros** (Banco Central, IBGE, CVM e relatórios de empresas), com **mentoria** de quem constrói agentes de IA no mercado e apresentação dos resultados no fim do dia.
 
 Este repositório é o ponto de partida de todos os times: aqui estão os **cases**, os **dados**, as **regras** e as instruções de **entrega**.
 
@@ -12,7 +12,7 @@ Este repositório é o ponto de partida de todos os times: aqui estão os **case
 
 ## Como funciona
 
-1. **Forme o time** (4 pessoas, de preferência com cursos diferentes) e **escolha um case**.
+1. **Forme o time** 4/5 pessoas, e **escolha um case**.
 2. **Leia o README do case inteiro antes de começar.** Os dados têm armadilhas, e metade do desafio é interpretá-los certo.
 3. **Construa com o Claude.** Explorar dado, escrever código, montar relatório, criar um app: o que fizer o problema andar.
 4. **Verifique.** Confira os números do Claude contra a fonte. Isso vale ponto (ver [regras](REGRAS_E_AVALIACAO.md)).
