@@ -7,7 +7,7 @@ Guia rápido para o dia do workshop. Dá para fazer tudo em 15 minutos, e o idea
 - **Notebook carregado** (e carregador; vai ter extensão, mas não para todo mundo ao mesmo tempo).
 - **Conta no Claude** (claude.ai), já logada no navegador.
 - **Conta no GitHub** (grátis, em github.com), já logada.
-- *Para o caminho avançado:* Python 3.10+ e o Claude Code instalado. Instruções em [avancado/README.md](avancado/README.md).
+- **Python 3.10+ e Claude Code instalados**, com as bibliotecas do `requirements.txt`. É obrigatório: todos os cases são feitos com código. Instruções em [avancado/README.md](avancado/README.md).
 
 ## 2. Pegar os dados
 
@@ -22,9 +22,7 @@ cd claude-lab-financas-puc2026
 
 ## 3. Construir com o Claude
 
-**Caminho básico (só o chat):** abra o claude.ai, suba os arquivos do seu case (CSV ou PDF) e o `README.md` do case, e descreva o que vocês querem. O Claude lê PDFs, analisa planilhas, faz gráficos e pode criar um **artefato** (um app ou página interativa) direto na conversa.
-
-**Caminho avançado (código, cases 1 a 3):** use o Claude Code na pasta do repositório, a partir do código de partida e da trilha de cada case em **[avancado/](avancado/README.md)**.
+Todos os cases seguem o **caminho avançado**: abram o Claude Code na pasta do repositório e partam do código de partida e da trilha de cada case em **[avancado/](avancado/README.md)**. O chat do claude.ai continua útil para entender o problema, ler PDFs e publicar o **artefato** no fim, mas a solução tem que ser construída com código.
 
 **Dicas que fazem diferença:**
 

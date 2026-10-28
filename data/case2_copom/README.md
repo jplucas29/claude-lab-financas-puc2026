@@ -14,7 +14,7 @@ Construir um **site** que interprete o tom do Banco Central nas atas do Copom e 
 2. **O que mudou**: as principais diferenças da ata mais recente em relação à anterior (o que entrou, o que saiu, o que mudou de tom);
 3. **O principal impacto**: o que essa mudança pode significar para a Selic, os juros futuros, o câmbio ou as expectativas do mercado.
 
-O site é o **artefato** que o time entrega (ver [regras](../../REGRAS_E_AVALIACAO.md)). Dá para fazer tudo no chat do Claude (caminho básico) ou com código (caminho avançado).
+O site é o **artefato** que o time entrega (ver [regras](../../REGRAS_E_AVALIACAO.md)). Ele deve ser construído com código, seguindo o caminho avançado (Python + Claude Code).
 
 > **Neste case, os dados não vêm prontos.** Encontrar e organizar a fonte faz parte do trabalho de um analista, e faz parte do desafio. Tudo o que vocês precisam é público e está no site do Banco Central.
 
@@ -29,7 +29,7 @@ O site é o **artefato** que o time entrega (ver [regras](../../REGRAS_E_AVALIAC
 - **Selic meta realizada:** [histórico das taxas de juros](https://www.bcb.gov.br/controleinflacao/historicotaxasjuros) no site do Banco Central (ou série 432 do SGS);
 - **Expectativas de Selic do mercado:** [Relatório Focus](https://www.bcb.gov.br/publicacoes/focus), publicado toda segunda-feira.
 
-No caminho avançado, o script `scripts/baixar_dados_bcb.py` baixa a Selic e o Focus de uma vez (gera `sgs_realizado.csv` e `focus_anuais.csv` em `data/case1_focus/`). Salvem as atas em `data/case2_copom/atas/` com o nome `ata_<nº da reunião>_<AAAA-MM-DD>.pdf` (data da reunião), que é o padrão que os scripts esperam.
+O script `scripts/baixar_dados_bcb.py` baixa a Selic e o Focus de uma vez (gera `sgs_realizado.csv` e `focus_anuais.csv` em `data/case1_focus/`). Salvem as atas em `data/case2_copom/atas/` com o nome `ata_<nº da reunião>_<AAAA-MM-DD>.pdf` (data da reunião), que é o padrão que os scripts esperam.
 
 > Não gastem mais de 15 minutos aqui. Se travar (internet, site fora do ar), chamem um mentor.
 
@@ -78,7 +78,7 @@ Escrevam o "principal impacto" em 2 ou 3 frases simples, citando os canais (Seli
 
 ### 6. Montar e publicar o site
 
-Peçam ao Claude um **artefato** a partir dos resultados dos passos anteriores, não de memória. Uma estrutura que funciona:
+Gerem o site com o Claude Code **a partir dos resultados dos passos anteriores** (por exemplo, um JSON com índice, mudanças e impacto), não de memória. Uma estrutura que funciona:
 
 1. **Topo:** a última reunião, a decisão e o índice atual, num "termômetro" do tom;
 2. **Gráfico:** o índice nas 6 reuniões, com a Selic meta ao lado;
@@ -96,10 +96,9 @@ Publiquem e abram o link numa aba anônima. **Bônus:** um campo em que o usuár
 | Manhã (10h30–13h00) | 0 a 4: dados reunidos, régua definida, índice das 6 atas conferido e mudanças identificadas |
 | Tarde (14h00–16h00) | 5 e 6: impacto escrito, site publicado, vídeo gravado |
 
-## Caminhos
+## Como resolver com código
 
-- **Básico (chat):** baixem as atas pelo navegador, subam os PDFs no claude.ai junto com a Selic e as expectativas do Focus, façam os passos 1 a 5 na conversa e peçam o site no passo 6.
-- **Avançado (código):** o script do Banco Central baixa a Selic e o Focus, outros scripts extraem as atas, geram o diff e classificam os parágrafos automaticamente, e o site é montado a partir desses resultados. Código de partida e trilha em **[avancado/case2_copom](../../avancado/case2_copom/README.md)**.
+O script do Banco Central baixa a Selic e o Focus, outros scripts extraem as atas, geram o diff e classificam os parágrafos automaticamente, e o site é montado a partir desses resultados. Código de partida e trilha em **[avancado/case2_copom](../../avancado/case2_copom/README.md)**.
 
 ## Cuidados com os dados
 

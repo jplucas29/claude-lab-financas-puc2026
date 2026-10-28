@@ -5,7 +5,7 @@
 - **Times de 4 pessoas, multidisciplinares.** Junte perfis diferentes: quem entende de economia e finanças, quem programa, quem apresenta. A mistura é proposital, é assim que times de mercado funcionam hoje.
 - **Um case por time.** Escolha um dos três. Cruzar com outro case é bem-vindo, desde que o foco fique claro.
 - **Construção com o Claude**, com mentoria. Os mentores circulam por todas as mesas; não há mentor fixo por time.
-- **Caminho básico e avançado valem igual.** A banca avalia o resultado e o rigor, não quantas linhas de código vocês escreveram.
+- **Todos os times seguem o caminho avançado.** A solução é construída com Python e Claude Code, a partir do código de partida de cada case em [avancado/](avancado/README.md). A ideia é ir além do chat e montar um fluxo que funcione de verdade. Ainda assim, a banca avalia o resultado e o rigor, não quantas linhas de código vocês escreveram.
 - **Tempo é o recurso escasso.** Uma coisa que funciona e conta uma história vale mais que cinco coisas pela metade.
 
 ## Horário-limite (deadline)
@@ -20,7 +20,7 @@ Os três itens precisam ser **públicos** (qualquer pessoa com o link consegue a
 
 1. **Vídeo de até 2 minutos.** O problema, a solução funcionando e por que importa. Vídeos com mais de 2 minutos: a banca assiste só até 2:00.
 2. **Artefato público.** O link publicado do que vocês construíram: app, dashboard, relatório interativo, calculadora.
-3. **GitHub público do time.** README detalhado seguindo o [modelo](modelo-repositorio-time/README.md): equipe, problema, solução, dados usados, **como verificaram os resultados**, limitações e próximos passos. Com o código, prompts ou arquivos que fizerem sentido.
+3. **GitHub público do time.** README detalhado seguindo o [modelo](modelo-repositorio-time/README.md): equipe, problema, solução, dados usados, **como verificaram os resultados**, limitações e próximos passos. Com o código (scripts, notebooks, Skills) e os prompts principais que usaram.
 
 Enviem os três links pelo formulário: **[PREENCHER: link do formulário de entrega]**. A organização publica tudo em [ENTREGAS.md](ENTREGAS.md).
 

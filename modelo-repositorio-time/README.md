@@ -37,8 +37,7 @@ Pelo menos 2 ou 3 exemplos concretos: que número o Claude produziu, onde vocês
 
 ## Como reproduzir
 
-Caminho básico: os prompts principais que usaram (podem colar aqui ou num arquivo `prompts.md`).
-Caminho avançado: dependências e comandos.
+Dependências, comandos para rodar e os prompts principais que usaram com o Claude Code (podem colar aqui ou num arquivo `prompts.md`).
 
 ```bash
 pip install -r requirements.txt

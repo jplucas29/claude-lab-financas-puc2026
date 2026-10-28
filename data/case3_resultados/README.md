@@ -28,10 +28,9 @@ Na pasta `releases/`, os releases de resultado mais recentes (PDF) de 4 empresas
 5. **"Surpresa" exige referência.** Sem consenso de mercado, comparem com o histórico ou com o guidance da própria empresa, e digam isso.
 6. **Não é recomendação de investimento.** Coloquem o aviso na nota.
 
-## Caminhos
+## Como resolver
 
-- **Básico (chat):** suba um release e peça uma nota de reação de 1 página com os números-chave, destaques positivos e negativos e uma conclusão. Depois confira os números no PDF.
-- **Avançado (código/agente):** um fluxo em etapas, com o Claude **extraindo** os números, um verificador **conferindo** cada um contra o PDF, e só depois a nota sendo **escrita**. Código de partida e trilha em **[avancado/case3_resultados](../../avancado/case3_resultados/README.md)**.
+Com Python e Claude Code, um fluxo em etapas, com o Claude **extraindo** os números, um verificador **conferindo** cada um contra o PDF, e só depois a nota sendo **escrita**. Código de partida e trilha em **[avancado/case3_resultados](../../avancado/case3_resultados/README.md)**.
 
 ## Perguntas para atacar
 

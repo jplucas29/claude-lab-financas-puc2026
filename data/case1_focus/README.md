@@ -48,10 +48,9 @@ O desafio é construir um **termômetro das expectativas**: um relatório, paine
 5. **Expectativa de PIB é para o ano inteiro**, e o PIB oficial só sai trimestralmente, com atraso. O IBC-Br é só uma aproximação mensal.
 6. Os dados param na data em que o script rodou. Diga essa data no seu artefato.
 
-## Caminhos
+## Como resolver
 
-- **Básico (chat):** suba os dois CSVs e este README no Claude e peça uma análise e um relatório semanal no estilo "o que mudou no Focus".
-- **Avançado (código):** montar um **workflow recorrente** que baixa os dados, recalcula, se verifica e escreve o relatório sozinho, como poderia rodar toda segunda. Código de partida e trilha em **[avancado/case1_focus](../../avancado/case1_focus/README.md)**.
+Com Python e Claude Code, montar um **workflow recorrente** que baixa os dados, recalcula, se verifica e escreve o relatório sozinho, como poderia rodar toda segunda. Código de partida e trilha em **[avancado/case1_focus](../../avancado/case1_focus/README.md)**.
 
 ## Perguntas para atacar
 

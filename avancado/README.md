@@ -1,10 +1,10 @@
 # Caminho avançado
 
-Para os times que querem ir além do chat: código em Python, **Claude Code**, fluxos automáticos e agentes. Vale para os cases **1 (Focus)**, **2 (Copom)** e **3 (Nota de resultado)**.
+É o caminho de **todos os times**: código em Python, **Claude Code**, fluxos automáticos e agentes, para os cases **1 (Focus)**, **2 (Copom)** e **3 (Nota de resultado)**.
 
-> O caminho avançado **não ganha ponto só por ser avançado**. A banca avalia utilidade, rigor e produto (ver [regras](../REGRAS_E_AVALIACAO.md)). Um fluxo automatizado que **verifica os próprios números** é o que diferencia.
+> Código **não ganha ponto só por ser código**. A banca avalia utilidade, rigor e produto (ver [regras](../REGRAS_E_AVALIACAO.md)). Um fluxo automatizado que **verifica os próprios números** é o que diferencia.
 
-## Preparação (de preferência antes do evento)
+## Preparação (obrigatória, antes do evento)
 
 1. **Python 3.10+** instalado.
 2. Na raiz do repositório:
