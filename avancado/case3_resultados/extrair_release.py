@@ -1,5 +1,5 @@
 """
-Case 3 — Nota de reação a resultado · extrai texto e tabelas de um release em PDF.
+Case 3 — Comparativo de resultados · extrai texto e tabelas de um release em PDF.
 
 Rode da raiz do repositório:
     python avancado/case3_resultados/extrair_release.py data/case3_resultados/releases/EMPRESA.pdf

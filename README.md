@@ -26,7 +26,7 @@ Nunca usou GitHub ou o Claude? Comece por **[COMO_COMECAR.md](COMO_COMECAR.md)**
 |---|------|------------------|-------|
 | 1 | **[Termômetro do Focus](data/case1_focus/README.md)** | Um agente que, toda semana, baixa o Relatório Focus, analisa o que mudou nas expectativas e envia a análise por e-mail | Focus (BCB) + séries do SGS |
 | 2 | **[Tradutor do Copom](data/case2_copom/README.md)** | Um site que lê as atas do Copom, mede o tom do Banco Central num índice e explica o que mudou e qual pode ser o principal impacto dessa mudança | Atas do Copom (PDF) + Selic e Focus 
-| 3 | **[Nota de reação a resultado](data/case3_resultados/README.md)** | Em 1 página, como um analista de banco reagiria ao resultado trimestral de uma empresa da B3? | Releases de resultado (PDF) de 4 empresas | 
+| 3 | **[Comparativo de resultados](data/case3_resultados/README.md)** | Uma apresentação executiva que compara os resultados trimestrais de 4 a 5 empresas do mesmo setor, para o diretor levar ao comitê | Releases de resultado (PDF) |
 
 Os três cases buscam resolver problemas de pessoas de dentro do mercado financeiro, de forma que a solução seja realmente uma ferramenta útil no dia a dia. O objetivo é despertar a curiosidade com IA para que vocês sejam capazes de automatizar processos. Por isso, todos os cases são resolvidos pelo **[caminho avançado](avancado/README.md)**, com código de partida em Python, Claude Code, Skills e fluxos automáticos que verificam os próprios números.
 
@@ -80,7 +80,7 @@ claude-lab-financas-puc2026/
 ├── avancado/                    caminho avançado dos cases 1, 2 e 3
 │   ├── case1_focus/             análise, acurácia e alertas do Focus
 │   ├── case2_copom/             extração, diff e índice de tom das atas
-│   ├── case3_resultados/        extrair → verificar → escrever a nota
+│   ├── case3_resultados/        extrair → verificar → comparar → apresentar
 │   └── skills_exemplo/          Skill de exemplo (bcb-sgs)
 ├── requirements.txt             bibliotecas do caminho avançado
 ├── scripts/

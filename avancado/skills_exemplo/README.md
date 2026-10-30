@@ -20,6 +20,6 @@ Depois é só pedir, por exemplo: "qual foi o IPCA acumulado em 12 meses no últ
 Criem a Skill do **seu** case, por exemplo:
 - `focus-semanal`: roda o termômetro e escreve o relatório no formato do time;
 - `ata-copom`: extrai, compara e classifica o tom de uma ata nova;
-- `nota-de-reacao`: extrai, verifica e escreve a nota no template da casa.
+- `apresentacao-resultados`: extrai, verifica e monta os slides no padrão da casa.
 
 Uma boa Skill diz **quando** usar, **o passo a passo**, **o que nunca fazer** (ex.: inventar números) e **como verificar** o resultado.

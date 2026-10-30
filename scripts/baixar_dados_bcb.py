@@ -18,7 +18,7 @@ import pandas as pd
 import requests
 
 SAIDA = Path(__file__).resolve().parent.parent / "data" / "case1_focus"
-INICIO = "2022-01-01"
+INICIO = "2020-01-01"  # cobre as previsões dos últimos 5 anos fechados
 
 OLINDA = ("https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/"
           "ExpectativasMercadoAnuais")

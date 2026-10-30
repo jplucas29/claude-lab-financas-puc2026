@@ -27,7 +27,7 @@ Todos os cases seguem o **caminho avançado**: abram o Claude Code na pasta do r
 **Dicas que fazem diferença:**
 
 - Comece colando o **README do case** e pedindo um **plano de ataque**, antes de pedir o resultado final.
-- Descreva **o problema e o resultado que você quer** ("uma nota de 1 página para um gestor, com 3 números-chave"), não só a tarefa ("analisa isso").
+- Descreva **o problema e o resultado que você quer** ("uma apresentação de 6 slides para um diretor, com 3 números-chave"), não só a tarefa ("analisa isso").
 - **Confira os números.** Peça ao Claude para mostrar de onde veio cada número e confira pelo menos alguns na fonte. Vocês são responsáveis pelas conclusões.
 - Itere: primeira versão simples funcionando → depois melhora.
 

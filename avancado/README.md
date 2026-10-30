@@ -1,6 +1,6 @@
 # Caminho avançado
 
-É o caminho de **todos os times**: código em Python, **Claude Code**, fluxos automáticos e agentes, para os cases **1 (Focus)**, **2 (Copom)** e **3 (Nota de resultado)**.
+É o caminho de **todos os times**: código em Python, **Claude Code**, fluxos automáticos e agentes, para os cases **1 (Focus)**, **2 (Copom)** e **3 (Comparativo de resultados)**.
 
 > Código **não ganha ponto só por ser código**. A banca avalia utilidade, rigor e produto (ver [regras](../REGRAS_E_AVALIACAO.md)). Um fluxo automatizado que **verifica os próprios números** é o que diferencia.
 
@@ -21,7 +21,7 @@
 |---|---|---|
 | 1 — Termômetro do Focus | [case1_focus/README.md](case1_focus/README.md) | análise, acurácia e alertas |
 | 2 — Tradutor do Copom | [case2_copom/README.md](case2_copom/README.md) | extração, diff de atas e índice de tom |
-| 3 — Nota de resultado | [case3_resultados/README.md](case3_resultados/README.md) | extração, verificador de números e template |
+| 3 — Comparativo de resultados | [case3_resultados/README.md](case3_resultados/README.md) | extração, verificador de números e roteiro da apresentação |
 | Skills | [skills_exemplo/README.md](skills_exemplo/README.md) | Skill completa de exemplo (`bcb-sgs`) |
 
 ## Como a trilha se encaixa no dia

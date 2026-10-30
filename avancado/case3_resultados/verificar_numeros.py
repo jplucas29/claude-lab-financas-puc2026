@@ -1,9 +1,9 @@
 """
-Case 3 — Nota de reação a resultado · o VERIFICADOR.
+Case 3 — Comparativo de resultados · o VERIFICADOR.
 
 A ideia: o Claude extrai os números do release para um JSON (ver
 metricas_exemplo.json), e este script confere cada um contra o PDF antes que
-qualquer nota seja escrita. É o passo "verificar" do loop agêntico.
+qualquer número entre na apresentação. É o passo "verificar" do loop agêntico.
 
     python avancado/case3_resultados/verificar_numeros.py <pasta_da_empresa_em_saida> <metricas.json>
 
