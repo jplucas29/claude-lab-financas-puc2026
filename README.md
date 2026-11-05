@@ -26,7 +26,7 @@ Nunca usou GitHub ou o Claude? Comece por **[COMO_COMECAR.md](COMO_COMECAR.md)**
 |---|------|------------------|-------|
 | 1 | **[Termômetro do Focus](data/case1_focus/README.md)** | Um agente que, toda semana, baixa o Relatório Focus, analisa o que mudou nas expectativas e envia a análise por e-mail | Focus (BCB) + séries do SGS |
 | 2 | **[Tradutor do Copom](data/case2_copom/README.md)** | Um site que lê as atas do Copom, mede o tom do Banco Central num índice e explica o que mudou e qual pode ser o principal impacto dessa mudança | Atas do Copom (PDF) + Selic e Focus 
-| 3 | **[Comparativo de resultados](data/case3_resultados/README.md)** | Uma apresentação executiva que compara os resultados trimestrais de 4 a 5 empresas do mesmo setor, para o diretor levar ao comitê | Releases de resultado (PDF) |
+| 3 | **[Comparativo de resultados](data/case3_resultados/README.md)** | Uma apresentação executiva que compara os resultados do 3º trimestre de 2026 da Gerdau e da Usiminas, para o diretor levar ao comitê | ITRs das duas empresas (PDF), já incluídos |
 
 Os três cases buscam resolver problemas de pessoas de dentro do mercado financeiro, de forma que a solução seja realmente uma ferramenta útil no dia a dia. O objetivo é despertar a curiosidade com IA para que vocês sejam capazes de automatizar processos. Por isso, todos os cases são resolvidos pelo **[caminho avançado](avancado/README.md)**, com código de partida em Python, Claude Code, Skills e fluxos automáticos que verificam os próprios números.
 
@@ -39,13 +39,13 @@ Tudo em **[`data/`](data/)**, uma pasta por case. Cada uma tem um `README.md` co
 | Horário | Atividade |
 |---|---|
 | 08h00 – 09h00 | Coffee break · aproveitem para conferir o login no Claude e no GitHub |
-| 09h00 – 10h30 | **Palestra de abertura** — introdução ao Claude, apresentação dos participantes e dos cases do dia · João Lisboa (Taicor · Claude Ambassador), Diogo Miranda (MGV Tech), Igor Brito (Visagio) e Igor Peres (PUC-Rio) |
+| 09h00 – 10h30 | **Palestra de abertura** — introdução ao Claude, apresentação dos participantes e dos cases do dia · com os palestrantes do workshop (ver [Organização](#organização)) |
 | 10h30 – 13h00 | **Mão na massa, parte 1** — os times desenvolvem os cases com o Claude (mentoria Taicor · MGV Tech · Visagio) |
 | 13h00 – 13h30 | Almoço |
-| 13h30 – 14h00 | **Palestra** — apresentação de insights dentro do Claude · Igor Brito (Visagio) ou Diogo Miranda (MGV Tech), a confirmar |
+| 13h30 – 14h00 | **Palestra** — apresentação de insights dentro do Claude · Visagio ou MGV Tech, a confirmar |
 | 14h00 – 16h30 | **Mão na massa, parte 2** — finalização e entrega dos cases (mentoria Taicor · MGV Tech · Visagio) |
 | **16h00** | **Deadline da entrega** (vídeo + artefato + GitHub) |
-| 16h30 – 17h00 | Coffee break · banca (João Lisboa, Diogo Miranda, Igor Brito e Igor Peres) seleciona os **3 finalistas** |
+| 16h30 – 17h00 | Coffee break · banca seleciona os **3 finalistas** |
 | 17h00 – 17h30 | Apresentação dos finalistas, anúncio do campeão e encerramento |
 
 ## Entrega e avaliação
@@ -56,12 +56,21 @@ Três itens, todos **públicos**, até **16h00**:
 2. **Artefato público**: o link publicado do que vocês construíram (app, dashboard, relatório interativo).
 3. **GitHub público do time**, com README detalhado do projeto e da equipe (use o [modelo](modelo-repositorio-time/README.md)).
 
+**Entreguem pelo [formulário de entrega](https://github.com/jplucas29/claude-lab-financas-puc2026/issues/new?template=entrega.yml)** até 16h00 (é preciso estar logado no GitHub).
+
 Detalhes, critérios e pesos em **[REGRAS_E_AVALIACAO.md](REGRAS_E_AVALIACAO.md)**. Checklist em **[entrega/CHECKLIST_ENTREGA.md](entrega/CHECKLIST_ENTREGA.md)**. Os links de todos os times ficam em **[ENTREGAS.md](ENTREGAS.md)**.
 
 ## Organização
 
 **Organizadores:** [PREENCHER: nomes e cursos]
-**Mentoria e banca:** [PREENCHER]
+**Palestrantes, mentoria e banca:**
+
+- [João Henrique Lisboa](https://www.linkedin.com/in/joaolisboa/), Co-Founder da Taicor e Claude Ambassador
+- [Diogo Miranda](https://www.linkedin.com/in/d1ogo-miranda/), Co-Founder da MGV Tech
+- Visagio, consultoria que aplica IA em seus processos
+- [Marco Cauduro](https://www.linkedin.com/in/marcocauduro/), criador da DeepStack, ferramenta voltada para investimentos
+- [Igor Peres](https://www.linkedin.com/in/goriperes/), supervisor do LIA e professor do Departamento de Engenharia Industrial da PUC-Rio
+
 **Apoio institucional:** [PREENCHER: Departamento de Economia da PUC-Rio / coordenação]
 
 ## Estrutura do repositório
@@ -76,7 +85,7 @@ claude-lab-financas-puc2026/
 ├── data/
 │   ├── case1_focus/             expectativas Focus + séries SGS (CSV)
 │   ├── case2_copom/             atas do Copom (PDF)
-│   └── case3_resultados/        releases trimestrais (PDF)
+│   └── case3_resultados/        ITRs da Gerdau e da Usiminas (PDF)
 ├── avancado/                    caminho avançado dos cases 1, 2 e 3
 │   ├── case1_focus/             análise, acurácia e alertas do Focus
 │   ├── case2_copom/             extração, diff e índice de tom das atas

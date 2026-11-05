@@ -7,7 +7,7 @@ Leia antes o [README do case](../../data/case3_resultados/README.md) (demanda, r
 O erro clássico de IA em finanças é o número errado escrito com confiança. Por isso o trabalho é separado em **etapas encadeadas**, com uma checagem automática no meio:
 
 ```
-PDFs dos releases ──► 1. extrair texto e tabelas ──► 2. Claude extrai métricas para JSON
+PDFs dos ITRs ──────► 1. extrair texto e tabelas ──► 2. Claude extrai métricas para JSON
                                                               │
 4. comparar as empresas ◄── 3. verificador confere cada número no PDF
          │                      (se falhar, volta para o passo 2)
@@ -18,8 +18,8 @@ PDFs dos releases ──► 1. extrair texto e tabelas ──► 2. Claude extra
 ## Ponto de partida
 
 ```bash
-# 1. extrair os releases (pode passar vários PDFs de uma vez)
-python avancado/case3_resultados/extrair_release.py data/case3_resultados/releases/*.pdf
+# 1. extrair os ITRs
+python avancado/case3_resultados/extrair_release.py data/case3_resultados/itrs/gerdau_ITR_3T26.pdf data/case3_resultados/itrs/usiminas_ITR_3T26.pdf
 
 # 2. peça ao Claude um metricas.json por empresa, no formato de metricas_exemplo.json
 #    (inclusive 'valor_como_aparece', 'pagina' e 'trecho' de cada número)
@@ -27,6 +27,8 @@ python avancado/case3_resultados/extrair_release.py data/case3_resultados/releas
 # 3. verificar cada empresa
 python avancado/case3_resultados/verificar_numeros.py avancado/case3_resultados/saida/EMPRESA metricas_EMPRESA.json
 ```
+
+> O ITR tem de 80 a 110 páginas. Antes de pedir a extração, achem as páginas certas (demonstração do resultado consolidada, release ou comentário de desempenho, notas por segmento; o mapa está no README do case) e passem só elas ao Claude.
 
 Arquivos de apoio:
 - [`extrair_release.py`](extrair_release.py): texto por página e tabelas em CSV.
@@ -40,14 +42,14 @@ Arquivos de apoio:
 - O fluxo completo para uma empresa: extrair, pedir o JSON ao Claude, verificar e corrigir.
 - Anotem **cada erro** que o verificador pegou.
 
-**Manhã — nível 2: o setor inteiro**
-- Rodem o fluxo para as 4 a 5 empresas e juntem tudo numa tabela comparativa, na mesma unidade e moeda.
+**Manhã — nível 2: as duas empresas**
+- Rodem o fluxo para a segunda empresa e juntem tudo numa tabela comparativa, na mesma unidade e com o mesmo critério.
 - Gerem os gráficos da comparação (receita, margens).
 
 **Tarde (depois da palestra das 13h30) — nível 3: a apresentação**
 - Escrevam a mensagem de cada slide seguindo o [`roteiro_apresentacao.md`](roteiro_apresentacao.md).
 - Gerem a apresentação a partir da tabela verificada: `.pptx` com `python-pptx` (ou direto no claude.ai) ou slides em HTML.
-- Bônus: um comando só que recebe a pasta de PDFs e devolve a apresentação, **refazendo automaticamente o que o verificador reprovar**.
+- Bônus: um comando só que recebe os PDFs e devolve a apresentação, **refazendo automaticamente o que o verificador reprovar**.
 - Bônus: transformem o formato da apresentação numa **Skill** (`SKILL.md`, veja o [exemplo](../skills_exemplo/bcb-sgs/SKILL.md)), para que o Claude sempre monte os slides no padrão da "casa".
 
 ## Onde o Claude Code ajuda

@@ -6,7 +6,7 @@
 |---|---|---|
 | 1 — Focus | Banco Central do Brasil: Sistema de Expectativas de Mercado (Focus) e Sistema Gerenciador de Séries Temporais (SGS) | Dados públicos, APIs abertas |
 | 2 — Copom | Banco Central do Brasil: atas do Comitê de Política Monetária | Documentos públicos |
-| 3 — Resultados | Releases de resultado publicados pelas próprias empresas em seus sites de Relações com Investidores | Documentos públicos |
+| 3 — Resultados | ITRs (Informações Trimestrais) do 3º trimestre de 2026 da Gerdau e da Usiminas, publicados pelas próprias empresas e na CVM | Documentos públicos |
 
 ## Regras
 

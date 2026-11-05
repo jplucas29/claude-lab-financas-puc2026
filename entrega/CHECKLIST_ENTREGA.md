@@ -15,7 +15,7 @@ Ensaiem uma vez antes de gravar. Uma gravação boa e simples vale mais que uma 
 - [ ] **Artefato** publicado. Abram o link numa **aba anônima** para conferir que está público.
 - [ ] **GitHub** do time **público**, com o README preenchido (equipe completa, problema, solução, dados, verificação, limitações).
 - [ ] Os links do vídeo e do artefato estão **dentro do README** do GitHub.
-- [ ] Os três links foram enviados no formulário de entrega.
+- [ ] Os três links foram enviados no [formulário de entrega](https://github.com/jplucas29/claude-lab-financas-puc2026/issues/new?template=entrega.yml).
 - [ ] Fontes dos dados citadas e aviso de "não é recomendação de investimento", quando aplicável.
 
 ## Se o time for finalista (5 min + 2 min de perguntas)

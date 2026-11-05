@@ -22,7 +22,7 @@ Os três itens precisam ser **públicos** (qualquer pessoa com o link consegue a
 2. **Artefato público.** O link publicado do que vocês construíram: app, dashboard, relatório interativo, calculadora.
 3. **GitHub público do time.** README detalhado seguindo o [modelo](modelo-repositorio-time/README.md): equipe, problema, solução, dados usados, **como verificaram os resultados**, limitações e próximos passos. Com o código (scripts, notebooks, Skills) e os prompts principais que usaram.
 
-Enviem os três links pelo formulário: **[PREENCHER: link do formulário de entrega]**. A organização publica tudo em [ENTREGAS.md](ENTREGAS.md).
+Enviem os três links pelo **[formulário de entrega](https://github.com/jplucas29/claude-lab-financas-puc2026/issues/new?template=entrega.yml)** (é preciso estar logado no GitHub; o horário do envio fica registrado). A organização publica tudo em [ENTREGAS.md](ENTREGAS.md).
 
 ## Critérios e pesos
 
