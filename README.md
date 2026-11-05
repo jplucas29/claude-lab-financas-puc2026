@@ -71,7 +71,8 @@ Detalhes, critérios e pesos em **[REGRAS_E_AVALIACAO.md](REGRAS_E_AVALIACAO.md)
 - [Marco Cauduro](https://www.linkedin.com/in/marcocauduro/), criador da DeepStack, ferramenta voltada para investimentos
 - [Igor Peres](https://www.linkedin.com/in/goriperes/), supervisor do LIA e professor do Departamento de Engenharia Industrial da PUC-Rio
 
-**Apoio institucional:** [PREENCHER: Departamento de Economia da PUC-Rio / coordenação]
+**Apoio institucional:**  Departamento de Economia da PUC-Rio 
+
 
 ## Estrutura do repositório
 
