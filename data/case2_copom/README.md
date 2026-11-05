@@ -33,9 +33,20 @@ O site é o **artefato** que o time entrega (ver [regras](../../REGRAS_E_AVALIAC
 
 ## Os dados
 
-Os dados **não vêm prontos**: encontrar e organizar a fonte faz parte do desafio. Tudo é público e está no site do Banco Central.
+As **6 atas mais recentes** do Copom publicadas antes do workshop **já estão no repositório**, na pasta [`atas/`](atas/):
 
-**As atas.** Baixem em PDF as **6 atas mais recentes do Copom publicadas até 06/11/2026**, na página [Atas do Copom](https://www.bcb.gov.br/publicacoes/atascopom). Todos os times usam o mesmo conjunto, para a banca conseguir comparar os índices. Para cada ata, anotem o **nº da reunião**, a **data da reunião** e a **data de publicação** (ver cuidado nº 1).
+| Arquivo | Reunião | Data da reunião | Decisão |
+|---|---|---|---|
+| [`ata_276_2026-01-28.pdf`](atas/ata_276_2026-01-28.pdf) | 276ª | 27 e 28/01/2026 | manteve a Selic em 15,00% |
+| [`ata_277_2026-03-18.pdf`](atas/ata_277_2026-03-18.pdf) | 277ª | 17 e 18/03/2026 | reduziu para 14,75% |
+| [`ata_278_2026-04-29.pdf`](atas/ata_278_2026-04-29.pdf) | 278ª | 28 e 29/04/2026 | reduziu para 14,50% |
+| [`ata_279_2026-06-17.pdf`](atas/ata_279_2026-06-17.pdf) | 279ª | 16 e 17/06/2026 | reduziu para 14,25% |
+| [`ata_280_2026-08-05.pdf`](atas/ata_280_2026-08-05.pdf) | 280ª | 4 e 5/08/2026 | reduziu para 14,00% |
+| [`ata_281_2026-09-16.pdf`](atas/ata_281_2026-09-16.pdf) | 281ª | 15 e 16/09/2026 | reduziu para 13,75% |
+
+Fonte: Banco Central do Brasil, [Atas do Copom](https://www.bcb.gov.br/publicacoes/atascopom). Cada ata é publicada alguns dias depois da reunião; a data de publicação está na página do BC (ver cuidado nº 1).
+
+> **Bônus do dia:** a ata da reunião desta semana (282ª) deve ser publicada na própria sexta, 06/11. Se sair a tempo, baixem e testem o site com ela: é o uso real do produto, uma ata nova chegando.
 
 **A Selic e as expectativas** (usadas no passo 5):
 
@@ -46,10 +57,8 @@ O script `scripts/baixar_dados_bcb.py` baixa a Selic e o Focus de uma vez (gera 
 
 **Onde guardar as atas.** O agente só responde bem se tiver as atas à mão. Definam um lugar fixo:
 
-- **pasta local** `data/case2_copom/atas/`, com o nome `ata_<nº da reunião>_<AAAA-MM-DD>.pdf` (data da reunião): é onde os scripts procuram;
+- **pasta local** `data/case2_copom/atas/`: as atas já estão lá, e é onde os scripts procuram;
 - para o **chat**, as mesmas atas (ou o texto extraído delas) ficam disponíveis para o Claude consultar: num **Projeto do claude.ai** (como conhecimento do projeto), numa pasta do Google Drive conectada ao Claude ou embutidas no próprio site.
-
-> Não gastem mais de 15 minutos buscando os dados. Se travar (internet, site fora do ar), chamem um mentor.
 
 ## Guia sugerido
 
@@ -116,7 +125,7 @@ Para o chat funcionar **dentro do plano pago, sem chave de API**, o caminho mais
 
 | Momento | Passos |
 |---|---|
-| Manhã (10h30–13h00) | dados, 1 a 4: régua definida, índice das 6 atas conferido e mudanças identificadas |
+| Manhã (10h30–13h00) | 1 a 4: régua definida, índice das 6 atas conferido e mudanças identificadas |
 | Tarde (14h00–16h00) | 5 e 6: impacto escrito, site com o chat publicado, vídeo gravado |
 
 ## Como resolver com código
@@ -134,7 +143,7 @@ O script do Banco Central baixa a Selic e o Focus, outros scripts extraem as ata
 
 ## O que a banca vai olhar neste case
 
-- Os dados usados estão **identificados** (quais atas, de onde, até que data)?
+- O impacto usa a **Selic e o Focus** para se fundamentar, citando a data dos dados?
 - A régua do índice é clara e o resultado é **reprodutível**?
 - Toda conclusão tem **evidência**: nº do parágrafo e trecho exato que existe de fato na ata?
 - O **chat** responde certo e sempre mostra de onde tirou a resposta?
