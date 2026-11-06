@@ -6,7 +6,7 @@ Um dia de mão na massa: resolvam, com o **Claude**, problemas reais de análise
 
 Este repositório é o ponto de partida de todos os times: aqui estão os **cases**, os **dados**, as **regras** e as instruções de **entrega**.
 
-> **Com apoio de:** [PREENCHER: departamento/coordenação da PUC-Rio e demais parceiros]
+> **Com apoio de:**  departamento de economia da PUC-Rio 
 
 ---
 
